@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("premium_photo-1670963025018-27dd11a9b0ce.avif");
+    background-size: cover;
+}
+
+.navbar {
+    width: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.nav-menu ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu ul li {
+    list-style: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+}
+
+.nav-menu ul li:hover {
+    background-color: #eb7620;
+    transition: 0.5s ease;
+}
+
+.toggle-btn {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.toggle-btn .bar {
+    height: 4px;
+    width: 32px;
+    background-color: #fff;
+    margin: 4px 0;
+    border-radius: 10px;
+}
+
+.content-section {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    transform: translateY(25vh);
+}
+
+.content-section h1 {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.content-section p {
+    font-size: 16px;
+    color: #0e0d0d;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.content-section .button {
+    margin-top: 25px;
+}
+
+.content-section .button a {
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 25px;
+    background-color: #fc9003;
+    border-radius: 5px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.content-section .button a:hover {
+    background-color: rgb(67, 144, 245);
+    transition: 0.5s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .toggle-btn {
+        display: flex;
+    }
+    .nav-menu {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.9);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+    .nav-menu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-menu ul li a {
+        font-size: 19px;
+        color: #fff;
+        padding: 10px;
+    }
+    .navbar .logo img {
+        width: 120px;
+    }
+    .content-section h1 {
+        font-size: 32px;
+    }
+    .content-section p {
+        font-size: 14px;
+    }
+    .content-section .button a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+} 
+/* footer page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    line-height: 1.2;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color:rgb(146, 141, 141);
+}
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+    background-color: #2d2e33;
+    padding: 60px 10%;
+}
+ul{
+    list-style: none;
+}
+.footer-col{
+    width: 25%;
+}
+.footer-col h4{
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 22px;
+    color: #f1bc0d;
+    text-transform: capitalize;
+}
+.footer-col h4::before{
+    content: '';
+    position:absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: #27c0ac;
+    height:2px;
+    width:40px;
+}
+ul li:not(:last-child){
+    margin: bottom 8px;
+}
+ul li a{
+    display: block;
+    font-size: 19px;
+    text-transform: capitalize;
+    color: #bdb6b6;
+    text-decoration: none;
+    transition: 0.4s;
+}
+ul li a:hover{
+    color: white;
+    padding-left: 2px;
+}
+
+.links a{
+    display: inline-block;
+    height: 44px;
+    width: 44px;
+    color: white;
+    background-color: rgba(40, 130, 214, 0.8);
+    margin: 0 8px 8px 0;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.links a:hover{
+    color: #4d4f55;
+    background-color: white;
+}
+
+@media(max-width: 740px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer-col h4::before{
+        all: unset;
+    }
+}
+
+@media(max-width: 555px){
+    .footer-col{
+        width: 100%;
+    }
+}
